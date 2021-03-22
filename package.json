@@ -1,17 +1,53 @@
 {
   "name": "flash-flow",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "ease the task",
+  "main": "./src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ./src/main.js"
+    "start": "electron ./src/main.js",
+    "pack": "build --dir",
+    "dist": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "org.zulip.zulip-electron",
+    "asar": true,
+    "linux": {
+      "category": "Utility",
+      "packageCategory": "Utility",
+      "description": "ease the task",
+      "target": [
+        "AppImage"
+      ]
+    },
+    "dmg": {
+      "icon": "./src/img/flash_logo.png",
+      "iconSize": 100,
+      "contents": [
+        {
+          "x": 380,
+          "y": 280,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 110,
+          "y": 280,
+          "type": "file"
+        }
+      ],
+      "window": {
+        "width": 500,
+        "height": 500
+      }
+    }
   },
   "keywords": [],
-  "author": "",
+  "author": "rahul <rahul.pan@media.net>",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^12.0.1"
+    "electron": "^12.0.1",
+    "electron-builder": "^22.10.5"
   },
   "dependencies": {
     "bower": "^1.8.12"
