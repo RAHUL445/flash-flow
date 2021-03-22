@@ -1,0 +1,20 @@
+{
+  "name": "vendor",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "rahul.pan <rahul.pan@media.net>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/RAHUL445/flash-flow",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}

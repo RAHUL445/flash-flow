@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body style="background: white;">
+    <h1>Hello World!</h1>
+    <p>
+        We are using Node.js <span id="node-version"></span>,
+        Chromium <span id="chrome-version"></span>,
+        and Electron <span id="electron-version"></span>.
+    </p>
+    <p id="toogle-p">hide or show</p>
+    <button id="toogle-b">toogle</button>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#toogle-b').click(function(){
+                $('#toogle-p').toggle();
+        });
+        })
+        
+    </script>
+</body>
+</html>
